@@ -1,0 +1,29 @@
+<h1>child Component</h1>
+Email is {{emaildata}}<br><br>
+password is {{passdata}}<br><br>
+<h3>From object data</h3> 
+Email is {{credentialobj.inemail}}<br><br>
+password is {{credentialobj.inpassword}}<br><br>
+
+
+<table class="table">
+    <tr>
+        <th>Email</th>
+        <th>Password</th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let item of listArray">
+            <td>{{item.inemail}}</td>
+            <td>{{item.inpassword}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<br>
+<h1>Child to Parent title</h1>
+<input class="form-control" #name><br>
+<a class="btn btn-primary" href="#" (click)="dataupdateevent.emit(name.value)">Click</a>
+<br>
+<br>
+
